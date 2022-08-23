@@ -1,0 +1,274 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Roboto+Condensed:wght@400;700&display=swap");
+
+:root {
+  /* colors */
+  --primary-50: #eff6ff;
+  --primary-100: #dbeafe;
+  --primary-200: #bfdbfe;
+  --primary-300: #93c5fd;
+  --primary-400: #60a5fa;
+  --primary-500: #3b82f6;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+  --primary-800: #1e40af;
+  --primary-900: #1e3a8a;
+
+  /* grey */
+  --grey-50: #f0f4f8;
+  --grey-100: #d9e2ec;
+  --grey-200: #bcccdc;
+  --grey-300: #9fb3c8;
+  --grey-400: #829ab1;
+  --grey-500: #627d98;
+  --grey-600: #486581;
+  --grey-700: #334e68;
+  --grey-800: #243b53;
+  --grey-900: #102a43;
+  /* rest of the colors */
+  --black: #222;
+  --white: #fff;
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+
+  /* fonts  */
+  --headingFont: "Roboto Condensed", Sans-Serif;
+  --bodyFont: "Cabin", Sans-Serif;
+  /* rest of the vars */
+  --backgroundColor: var(--grey-50);
+  --textColor: var(--grey-900);
+  --borderRadius: 4px;
+  --letterSpacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1120px;
+  --fixed-width: 500px;
+  --fluid-width: 90vw;
+  --breakpoint-lg: 992px;
+  --nav-height: 9.6rem;
+  --input-height: 3.6rem;
+  /* box shadow*/
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--backgroundColor);
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--textColor);
+}
+
+img {
+  display: block;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+/*
+=============== 
+TOASTIFY CSS
+===============
+*/
+.Toastify__toast {
+  font-size: 1.6rem;
+}
+
+/*
+=============== 
+SPINNER
+===============
+*/
+.loading {
+  width: 8rem;
+  height: 8rem;
+  border: 5px solid var(--grey-400);
+  border-radius: 50%;
+  border-top-color: var(--primary-500);
+  animation: spinner 2s linear infinite;
+}
+.loading-center {
+  margin: 0 auto;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*
+=============== 
+Global Classes
+===============
+*/
+
+.container {
+  width: var(--fluid-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.page {
+  height: calc(100vh - var(--nav-height));
+}
+
+.page-full {
+  min-height: 100vh;
+}
+
+.heading--first,
+.heading--second,
+.heading--third,
+.heading--fourth {
+  font-family: var(--headingFont);
+  margin-top: 0;
+  line-height: 1.2;
+  letter-spacing: var(--letterSpacing);
+}
+
+.heading--first {
+  font-size: 5.2rem;
+  margin-bottom: 2.2rem;
+}
+
+.heading--second {
+  font-size: 4rem;
+  margin-bottom: 2.2rem;
+}
+
+.heading--third {
+  font-size: 3.2rem;
+}
+
+.heading--fourth {
+  font-size: 2.6rem;
+}
+
+/*
+=============== 
+BUTTON CLASSES
+===============
+*/
+.button {
+  border-color: transparent;
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+  background-color: var(--primary-500);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--primary-700);
+  box-shadow: var(--shadow-3);
+}
+
+.button--hero {
+  font-size: 2rem;
+  color: var(--white);
+  padding: 0.4rem 2rem;
+}
+
+.button--full {
+  font-size: 1.6rem;
+  width: 100%;
+  margin-top: 1.6rem;
+  padding: 0.6rem 1.2rem;
+  color: var(--white);
+}
+
+.button--member {
+  font-size: 1.6rem;
+  letter-spacing: var(--letterSpacing);
+  color: var(--primary-500);
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+}
+
+.button--toggle {
+  border-color: transparent;
+  color: var(--primary-500);
+  background-color: unset;
+  display: flex;
+  align-items: center;
+}
+
+.button--dropdown {
+  width: 100%;
+  text-transform: capitalize;
+  color: var(--primary-500);
+  border-color: transparent;
+  background-color: var(--primary-100);
+  letter-spacing: var(--letterSpacing);
+  cursor: pointer;
+}
+
+.button--close {
+  border-color: transparent;
+  background-color: unset;
+  color: var(--red-dark);
+  cursor: pointer;
+}
+
+.button--edit {
+  display: flex;
+  align-items: center;
+
+  margin-right: 0.8rem;
+  color: var(--green-dark);
+  background-color: var(--green-light);
+}
+
+.button--delete {
+  background-color: var(--red-light);
+  color: var(--red-dark);
+}
+
+@media only screen and (max-width: 62em) {
+  .heading--first {
+    font-size: 4.8rem;
+  }
+
+  .limit-width {
+    width: 100%;
+    max-width: 64rem;
+  }
+}
