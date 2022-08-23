@@ -14,6 +14,8 @@ import { useSelector } from "react-redux";
 function App() {
   const { user } = useSelector((store) => store.user);
 
+  console.log("TEST INTEGRATION FEATURE :)");
+
   return (
     <BrowserRouter>
       <Routes>
